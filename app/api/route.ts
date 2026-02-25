@@ -102,6 +102,6 @@ export const DATA_STRUCTURE = {
     },
 }
 
-export default function GET(request: Request) {
+export function GET(request: Request) {
     return new Response(JSON.stringify(DATA_STRUCTURE));
 }
