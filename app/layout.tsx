@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sabrina Toso — Fotografa",
-  description: "Portfolio fotografico di Sabrina Toso. Concerti, eventi live, sport e motosport. Fotografia professionale.",
+  title: "Sabrina — Fotografa",
+  description: "Portfolio fotografico di Sabrina. Concerti, eventi live, sport e motosport. Fotografia professionale.",
 };
 
 export default function RootLayout({

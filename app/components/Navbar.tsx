@@ -100,7 +100,7 @@ export default function Navbar() {
                             lineHeight: 1,
                         }}
                     >
-                        Sabrina Toso
+                        Sabrina
                     </span>
                     <span
                         style={{
