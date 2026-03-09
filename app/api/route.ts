@@ -258,20 +258,59 @@ export const DATA_STRUCTURE = {
             {
                 name: "Coscienza Festival",
                 folder: "eventi/coscienza",
-                cover: "coscienza_1.jpg",
-                files: [],
+                cover: "2O0A8797.jpg",
+                files: [
+                    "2O0A8797.jpg", "2O0A8841.jpg", "2O0A8875.jpg", "2O0A9005.jpg", "2O0A9264.jpg",
+                    "2O0A9433.jpg", "2O0A9439.jpg", "2O0A9451.jpg", "2O0A9466.jpg", "2O0A9472.jpg",
+                    "2O0A9473.jpg", "2O0A9487.jpg", "2O0A9495.jpg", "2O0A9633.jpg", "2O0A9662.jpg",
+                    "2O0A9753.jpg"
+                ],
+            },
+            {
+                name: "Poplar Festival",
+                folder: "eventi/poplar_extra",
+                cover: "2O0A7819.jpg",
+                files: [
+                    "11_163832_shot_arcy.jpg", "11_180111_shot_arcy.jpg", "11_180255_shot_arcy.jpg",
+                    "11_192018_shot_arcy.jpg", "12_171245_shot_arcy.jpg", "12_204841_shot_arcy.jpg",
+                    "13_003929_shot_arcy.jpg", "13_004928_shot_arcy.jpg", "13_005328_shot_arcy.jpg",
+                    "13_202227_shot_arcy.jpg", "13_203821_shot_arcy.jpg", "13_210137_shot_arcy.jpg",
+                    "14_165235_shot_arcy.jpg", "14_170022_shot_arcy.jpg", "14_174346_shot_arcy.jpg",
+                    "14_174453_shot_arcy.jpg", "2O0A7819.jpg", "Sabrina_Arciprete-19.jpg",
+                    "Sabrina_Arciprete-22.jpg", "Sabrina_Arciprete-38.jpg", "Sabrina_Arciprete-79.jpg"
+                ],
             },
             {
                 name: "Skygarden Tournament",
                 folder: "eventi/skygarden",
-                cover: "skygarden_1.jpg",
-                files: [],
+                cover: "Sabrina_Arciprete-80.jpg",
+                files: [
+                    "0CF7D645-7D41-437A-A611-414E997BE287_L0_001-08_06_2025, 16_32_00.jpg",
+                    "17F2136E-13D4-4436-B2F6-373EBD150DE5_L0_001-08_06_2025, 16_32_00.jpg",
+                    "28FC5A5C-A986-4087-BC92-FE350094D0B9_L0_001-08_06_2025, 16_31_55.jpg",
+                    "2D04FA66-A86F-4281-B668-B29BAB278BFD_L0_001-08_06_2025, 16_31_57 (1).jpg",
+                    "527A2CD4-BC0C-4E7F-9AD4-B48DF821C7B4_L0_001-08_06_2025, 16_32_01.jpg",
+                    "9AA4DC4F-D3A9-4B83-BEAA-C1BE2E199666_L0_001-08_06_2025, 16_32_00.jpg",
+                    "CF5CB1F7-942B-4C77-8E8C-66C2DF25AA42_L0_001-08_06_2025, 16_32_01.jpg",
+                    "D3B4DB49-D691-4D09-B750-E9BD320672D9_L0_001-08_06_2025, 16_33_40.jpg",
+                    "D469AB3C-DF3E-4D16-9FF1-F4936DD4E5F0_L0_001-08_06_2025, 16_31_54.jpg",
+                    "E459E0C3-C929-43CB-91CF-C1987132626B_L0_001-08_06_2025, 16_31_59 (1).jpg",
+                    "F721C092-6580-4DED-ACA2-7E0AA2DB92B9_L0_001-08_06_2025, 16_31_58.jpg",
+                    "FDD5E362-5A5E-4DB8-9CB0-D3E09389CA47_L0_001-08_06_2025, 16_31_57.jpg",
+                    "Sabrina_Arciprete-80.jpg"
+                ],
             },
             {
                 name: "Shakedown FS-26",
                 folder: "eventi/shakedown",
-                cover: "shakedown_1.jpg",
-                files: [],
+                cover: "Shakedown Ferrari -23.jpg",
+                files: [
+                    "Shakedown Ferrari -05.jpg", "Shakedown Ferrari -06.jpg", "Shakedown Ferrari -10.jpg",
+                    "Shakedown Ferrari -11.jpg", "Shakedown Ferrari -12.jpg", "Shakedown Ferrari -19.jpg",
+                    "Shakedown Ferrari -20.jpg", "Shakedown Ferrari -22.jpg", "Shakedown Ferrari -23.jpg",
+                    "Shakedown Ferrari -25.jpg", "Shakedown Ferrari -32.jpg", "Shakedown Ferrari -40.jpg",
+                    "Shakedown Ferrari -44.jpg", "Shakedown Ferrari -45.jpg"
+                ],
             },
         ]
     },
