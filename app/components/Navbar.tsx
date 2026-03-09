@@ -1,17 +1,21 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const NAV_LINKS = [
-    { label: 'Home', href: '#home' },
-    { label: 'Concerti', href: '#concerti' },
-    { label: 'Sport e Motosport', href: '#sport' },
+    { label: 'Home', href: '/' },
+    { label: 'About Me', href: '/about' },
+    { label: 'Concerti e Festival', href: '/concerti' },
+    { label: 'Eventi', href: '/eventi' },
+    { label: 'Contatti', href: '/contatti' },
 ];
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState('home');
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,34 +25,8 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Intersection Observer for active section
-    useEffect(() => {
-        const sections = ['home', 'concerti', 'sport'];
-        const observers: IntersectionObserver[] = [];
-
-        sections.forEach((id) => {
-            const el = document.getElementById(id);
-            if (!el) return;
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) setActiveSection(id);
-                },
-                { threshold: 0.3 }
-            );
-            observer.observe(el);
-            observers.push(observer);
-        });
-
-        return () => observers.forEach((obs) => obs.disconnect());
-    }, []);
-
-    const handleNavClick = (href: string) => {
+    const handleNavClick = () => {
         setMenuOpen(false);
-        const id = href.replace('#', '');
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-        }
     };
 
     return (
@@ -77,15 +55,17 @@ export default function Navbar() {
                 className="animate-slide-down"
             >
                 {/* Logo / Name */}
-                <button
-                    onClick={() => handleNavClick('#home')}
+                <Link
+                    href="/"
+                    onClick={() => handleNavClick()}
                     style={{
                         background: 'none',
                         border: 'none',
                         cursor: 'pointer',
                         display: 'flex',
                         flexDirection: 'column',
-                        alignItems: 'flex-start',
+                        alignItems: 'center',
+                        textDecoration: 'none',
                         gap: '2px',
                         padding: 0,
                     }}
@@ -114,7 +94,7 @@ export default function Navbar() {
                     >
                         Fotografa
                     </span>
-                </button>
+                </Link>
 
                 {/* Desktop Links */}
                 <ul
@@ -126,12 +106,12 @@ export default function Navbar() {
                     className="hidden-mobile"
                 >
                     {NAV_LINKS.map(({ label, href }) => {
-                        const id = href.replace('#', '');
-                        const isActive = activeSection === id;
+                        const isActive = pathname === href;
                         return (
                             <li key={href}>
-                                <button
-                                    onClick={() => handleNavClick(href)}
+                                <Link
+                                    href={href}
+                                    onClick={() => handleNavClick()}
                                     style={{
                                         background: 'none',
                                         border: 'none',
@@ -145,6 +125,7 @@ export default function Navbar() {
                                         transition: 'color 0.3s ease',
                                         padding: '4px 0',
                                         position: 'relative',
+                                        textDecoration: 'none',
                                     }}
                                     onMouseEnter={(e) => {
                                         if (!isActive)
@@ -168,7 +149,7 @@ export default function Navbar() {
                                             transition: 'width 0.3s ease',
                                         }}
                                     />
-                                </button>
+                                </Link>
                             </li>
                         );
                     })}
@@ -231,9 +212,10 @@ export default function Navbar() {
                     className="animate-fade-in show-mobile"
                 >
                     {NAV_LINKS.map(({ label, href }, idx) => (
-                        <button
+                        <Link
                             key={href}
-                            onClick={() => handleNavClick(href)}
+                            href={href}
+                            onClick={() => handleNavClick()}
                             className={`animate-slide-up delay-${(idx + 1) * 100}`}
                             style={{
                                 background: 'none',
@@ -245,10 +227,11 @@ export default function Navbar() {
                                 color: 'var(--color-cream)',
                                 letterSpacing: '0.05em',
                                 opacity: 0,
+                                textDecoration: 'none',
                             }}
                         >
                             {label}
-                        </button>
+                        </Link>
                     ))}
                 </div>
             )}

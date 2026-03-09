@@ -207,7 +207,7 @@ h4 {
   width: 60px;
   height: 1px;
   background: var(--color-gold);
-  margin: 16px 0 24px;
+  margin: 16px auto 24px;
 }
 
 /* ─── Section Label ─── */

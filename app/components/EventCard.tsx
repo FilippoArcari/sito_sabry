@@ -114,7 +114,7 @@ export default function EventCard({ event, index, onClick }: EventCardProps) {
                     left: 0,
                     right: 0,
                     padding: '24px 20px',
-                    textAlign: 'left',
+                    textAlign: 'center',
                 }}
             >
                 <p
