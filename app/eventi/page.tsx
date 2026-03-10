@@ -50,7 +50,7 @@ export default function Eventi() {
         <>
             <Navbar />
             <main className="min-h-screen bg-[var(--bg-secondary)] pt-[var(--nav-height)] flex flex-col bg-black">
-                <section className="flex-1 w-full flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 py-20 lg:py-32">
+                <section className="flex-1 w-full flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 pt-32 pb-20 lg:pt-40 lg:pb-32">
                     <div className="max-w-5xl w-full mx-auto">
                         <SectionTitle label="Portfolio" title={Eventi.main_title} />
 

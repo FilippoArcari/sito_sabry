@@ -230,13 +230,19 @@ export const DATA_STRUCTURE = {
                 name: "Poplar Festival",
                 subtitle: "atmosphere and people",
                 folder: "concerti/poplar/Foto_generali",
-                cover: "Foto_generali_1.jpg",
+                cover: "2O0A7819.jpg",
                 files: [
                     "Foto_generali_1.jpg", "Foto_generali_2.jpg", "Foto_generali_3.jpg", "Foto_generali_4.jpg", "Foto_generali_5.jpg",
                     "Foto_generali_6.jpg", "Foto_generali_7.jpg", "Foto_generali_8.jpg", "Foto_generali_9.jpg", "Foto_generali_10.jpg",
                     "Foto_generali_11.jpg", "Foto_generali_12.jpg", "Foto_generali_13.jpg", "Foto_generali_14.jpg", "Foto_generali_15.jpg",
                     "Foto_generali_16.jpg", "Foto_generali_17.jpg", "Foto_generali_18.jpg", "Foto_generali_19.jpg", "Foto_generali_20.jpg",
                     "Foto_generali_21.jpg", "Foto_generali_22.jpg", "Foto_generali_23.jpg", "Foto_generali_24.jpg",
+                    "11_163832_shot_arcy.jpg", "11_180111_shot_arcy.jpg", "11_180255_shot_arcy.jpg", "11_192018_shot_arcy.jpg",
+                    "12_171245_shot_arcy.jpg", "12_204841_shot_arcy.jpg", "13_003929_shot_arcy.jpg", "13_004928_shot_arcy.jpg",
+                    "13_005328_shot_arcy.jpg", "13_202227_shot_arcy.jpg", "13_203821_shot_arcy.jpg", "13_210137_shot_arcy.jpg",
+                    "14_165235_shot_arcy.jpg", "14_170022_shot_arcy.jpg", "14_174346_shot_arcy.jpg", "14_174453_shot_arcy.jpg",
+                    "2O0A7819.jpg", "Sabrina_Arciprete-19.jpg", "Sabrina_Arciprete-22.jpg", "Sabrina_Arciprete-38.jpg",
+                    "Sabrina_Arciprete-79.jpg"
                 ]
             },
             {
@@ -264,20 +270,6 @@ export const DATA_STRUCTURE = {
                     "2O0A9433.jpg", "2O0A9439.jpg", "2O0A9451.jpg", "2O0A9466.jpg", "2O0A9472.jpg",
                     "2O0A9473.jpg", "2O0A9487.jpg", "2O0A9495.jpg", "2O0A9633.jpg", "2O0A9662.jpg",
                     "2O0A9753.jpg"
-                ],
-            },
-            {
-                name: "Poplar Festival",
-                folder: "eventi/poplar_extra",
-                cover: "2O0A7819.jpg",
-                files: [
-                    "11_163832_shot_arcy.jpg", "11_180111_shot_arcy.jpg", "11_180255_shot_arcy.jpg",
-                    "11_192018_shot_arcy.jpg", "12_171245_shot_arcy.jpg", "12_204841_shot_arcy.jpg",
-                    "13_003929_shot_arcy.jpg", "13_004928_shot_arcy.jpg", "13_005328_shot_arcy.jpg",
-                    "13_202227_shot_arcy.jpg", "13_203821_shot_arcy.jpg", "13_210137_shot_arcy.jpg",
-                    "14_165235_shot_arcy.jpg", "14_170022_shot_arcy.jpg", "14_174346_shot_arcy.jpg",
-                    "14_174453_shot_arcy.jpg", "2O0A7819.jpg", "Sabrina_Arciprete-19.jpg",
-                    "Sabrina_Arciprete-22.jpg", "Sabrina_Arciprete-38.jpg", "Sabrina_Arciprete-79.jpg"
                 ],
             },
             {

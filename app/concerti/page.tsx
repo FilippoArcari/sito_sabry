@@ -30,17 +30,18 @@ type GalleryState = {
 
 // ── Section title ─────────────────────────────────────────────────────────
 function SectionTitle({ label, title }: { label: string; title: string }) {
-    return (
-        <div className="reveal flex flex-col items-center text-center mb-14">
-            <span className="section-label">{label}</span>
-            <div className="gold-divider" />
-            <h2 className="font-serif text-[clamp(36px,5vw,60px)] font-light text-[var(--color-cream)] tracking-[0.02em]">
-                {title}
-            </h2>
-        </div>
-    );
+  return (
+    <div className="reveal mb-14 flex flex-col items-center text-center">
+      <div className="flex flex-col items-start">
+        <span className="section-label">{label}</span>
+        <div className="gold-divider"/>
+      </div>
+      <h2 className="font-serif text-[clamp(36px,5vw,60px)] font-light text-[var(--color-cream)] tracking-[0.02em]">
+        {title}
+      </h2>
+    </div>
+  );
 }
-
 export default function Concerti() {
     const [selectedConcert, setSelectedConcert] = useState<ConcertEvent | null>(null);
     const [openGallery, setOpenGallery] = useState<GalleryState>(null);
@@ -70,7 +71,7 @@ export default function Concerti() {
         <>
             <Navbar />
             <main className="min-h-screen bg-[var(--bg-primary)] pt-[var(--nav-height)] flex flex-col bg-black">
-                <section className="flex-1 w-full flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 py-20 lg:py-32">
+                <section className="flex-1 w-full flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 pt-32 pb-20 lg:pt-40 lg:pb-32">
                     <div className="max-w-5xl w-full mx-auto">
                         <SectionTitle label="Portfolio" title={Concerti.main_title} />
 
@@ -113,7 +114,7 @@ export default function Concerti() {
                                 </div>
 
                                 {/* Festival blocks */}
-                                <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[clamp(16px,2.5vw,28px)] w-full justify-center ">
+                                <div className="flex flex-col items-center   w-full justify-center gap-[clamp(16px,2.5vw,28px)]">
                                     {Concerti.festival_blocks.map((festival, idx) => (
                                         <FestivalBlock
                                             key={festival.name}

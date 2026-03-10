@@ -64,8 +64,10 @@ function useScrollReveal() {
 function SectionTitle({ label, title }: { label: string; title: string }) {
   return (
     <div className="reveal mb-14 flex flex-col items-center text-center">
-      <span className="section-label">{label}</span>
-      <div className="gold-divider" />
+      <div className="flex flex-col items-start">
+        <span className="section-label">{label}</span>
+        <div className="gold-divider"/>
+      </div>
       <h2 className="font-serif text-[clamp(36px,5vw,60px)] font-light text-[var(--color-cream)] tracking-[0.02em]">
         {title}
       </h2>
@@ -139,9 +141,6 @@ export default function Home() {
 
           {/* Hero content */}
           <div className="relative z-10 text-center flex flex-col items-center justify-center w-full px-6 md:px-12 lg:px-24">
-            <p className="font-sans text-[clamp(9px,1.2vw,12px)] tracking-[0.38em] uppercase text-[var(--color-gold)] mb-8 animate-slide-up delay-200">
-              Live &amp; Event Photographer
-            </p>
 
             <h1 className="font-serif text-[clamp(56px,12vw,140px)] font-light leading-[0.88] text-[var(--color-cream)] tracking-[0.04em] animate-slide-up delay-300">
               Sabrina
@@ -149,23 +148,6 @@ export default function Home() {
               <span className="italic opacity-80">Arciprete</span>
             </h1>
 
-            {/* Section quick links */}
-            <div className="flex gap-[clamp(18px,3.5vw,44px)] justify-center mt-16 flex-wrap animate-slide-up delay-600">
-              {[
-                { label: 'About Me', href: '/about' },
-                { label: 'Concerti', href: '/concerti' },
-                { label: 'Eventi', href: '/eventi' },
-                { label: 'Contatti', href: '/contatti' },
-              ].map(({ label, href }) => (
-                <a
-                  key={href}
-                  href={href}
-                  className="bg-transparent border-none cursor-pointer font-sans text-[clamp(9px,1vw,11px)] tracking-[0.25em] uppercase text-white/55 transition-colors duration-300 py-1 hover:text-[var(--color-cream)] z-20 no-underline"
-                >
-                  {label}
-                </a>
-              ))}
-            </div>
           </div>
         </section>
       </main>

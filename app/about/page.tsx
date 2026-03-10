@@ -3,10 +3,10 @@
 import Navbar from '../components/Navbar';
 import { DATA_STRUCTURE } from '../api/route';
 
-// ── Section title ─────────────────────────────────────────────────────────
+// ── Section title ─────────────────────────────────────────
 function SectionTitle({ label, title }: { label: string; title: string }) {
     return (
-        <div className="reveal flex flex-col items-center text-center mb-14">
+        <div className="reveal flex flex-col items-center text-center mb-20">
             <span className="section-label">{label}</span>
             <div className="gold-divider" />
             <h2 className="font-serif text-[clamp(36px,5vw,60px)] font-light text-[var(--color-cream)] tracking-[0.02em]">
@@ -22,79 +22,113 @@ export default function About() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen bg-[var(--bg-secondary)] pt-[var(--nav-height)] flex flex-col bg-black">
-                <section className="flex-1 w-full flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 py-20 lg:py-32">
-                    <div className="max-w-5xl w-full mx-auto">
+
+            <main className="min-h-screen bg-black flex flex-col">
+
+                {/* ───────────── ABOUT SECTION ───────────── */}
+                <section className="flex-1  sm:py-24 lg:py-32 px-8 sm:px-14 lg:px-24">
+
+                    {/* container centrale */}
+                    <div className="mx-auto">
+
                         <SectionTitle label="Fotografa" title="About Me" />
 
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-[clamp(40px,6vw,80px)]">
-                            {/* Bio + Percorso */}
-                            <div className="reveal text-center md:text-left max-w-2xl flex-1">
-                                <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] font-normal text-[var(--color-cream)] mb-6 tracking-[0.02em]">
+                        {/* layout principale */}
+                        <div className="flex flex-col lg:flex-row items-start gap-20 lg:gap-28">
+
+                            {/* TEXT COLUMN */}
+                            <div className="flex-1 flex flex-col gap-4 px-6" style={{padding:"0px 2em"}}>
+                                <div className="reveal">
+                                {/* Chi sono */}
+                                <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] text-[var(--color-cream)] tracking-[0.02em] mb-8">
                                     {homeData.about.title}
                                 </h3>
-                                {homeData.about.text.split('\n').map((para, i) => (
-                                    <p
-                                        key={`bio-${i}`}
-                                        className="font-sans text-[15px] text-[var(--color-text-muted)] leading-[1.95] font-light mb-[18px]"
-                                    >
-                                        {para}
-                                    </p>
-                                ))}
 
-                                {/* Il mio percorso */}
-                                <div className="mt-12 pt-10 border-t border-[var(--color-border)]">
-                                    <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] font-normal text-[var(--color-cream)] mb-6 tracking-[0.02em]">
-                                        {homeData.formation.title}
-                                    </h3>
-                                    {homeData.formation.text.split('\n').map((para, i) => (
-                                        <p
-                                            key={`form-${i}`}
-                                            className="font-sans text-[15px] text-[var(--color-text-muted)] leading-[1.95] font-light mb-[18px]"
-                                        >
+                                <div className="text-[var(--color-text-muted)] font-light ">
+
+                                    {homeData.about.text.split('\n').map((para, i) => (
+                                        <p 
+                                        className="py-2 sm:px-6 lg:px-8"  
+
+                                        key={`bio-${i}`}>
                                             {para}
                                         </p>
                                     ))}
+
                                 </div>
+                                </div>
+                                {/* Percorso */}
+                                <div className="mt-28 pt-20border-t border-[var(--color-border)] " >
+
+                                    <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] text-[var(--color-cream)] tracking-[0.02em] mb-8">
+                                        {homeData.formation.title}
+                                    </h3>
+
+                                    <div className="space-y-6 text-[15px] leading-[1.95] text-[var(--color-text-muted)] font-light">
+
+                                        {homeData.formation.text.split('\n').map((para, i) => (
+                                            <p key={`form-${i}`}>
+                                                {para}
+                                            </p>
+                                        ))}
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            {/* Profile photo */}
-                            <div className="reveal delay-100 flex-1 flex justify-center w-full">
-                                <div className="w-full aspect-[3/4] overflow-hidden max-w-[420px] rounded-lg">
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+
+                            {/* IMAGE COLUMN */}
+                            <div className="reveal delay-100 flex-1 flex justify-center lg:justify-end w-full">
+
+                                <div className="w-full max-w-[420px] aspect-[3/4] overflow-hidden rounded-lg">
+
                                     <img
                                         src="/sabrina.png"
                                         alt="Sabrina Arciprete"
-                                        className="w-full h-full object-cover block"
+                                        className="w-full h-full object-cover"
                                         onError={(e) => {
                                             const el = e.currentTarget as HTMLImageElement;
                                             el.style.display = 'none';
+
                                             if (el.parentElement) {
                                                 el.parentElement.innerHTML =
                                                     '<span style="font-family:var(--font-sans);font-size:11px;letter-spacing:0.2em;color:var(--color-text-dim);text-transform:uppercase;">Foto in arrivo</span>';
                                             }
                                         }}
                                     />
+
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </section>
 
-                {/* ════════════════════════════════════════════════ FOOTER ═══ */}
-                <footer className="bg-[var(--bg-secondary)] border-t border-[var(--color-border)] px-6 md:px-12 lg:px-24 py-10 flex flex-col items-center justify-center gap-4 text-center mt-auto">
+
+                {/* ───────────── FOOTER ───────────── */}
+                <footer className="bg-[var(--bg-secondary)] border-t border-[var(--color-border)] px-8 sm:px-14 lg:px-24 py-14 flex flex-col items-center text-center gap-4">
+
                     <div>
                         <span className="font-serif text-[18px] font-light text-[var(--color-cream)] tracking-[0.06em]">
                             Sabrina Arciprete
                         </span>
+
                         <span className="block font-sans text-[10px] tracking-[0.25em] text-[var(--color-gold)] uppercase mt-1">
-                            Live &amp; Event Photographer
+                            Live & Event Photographer
                         </span>
                     </div>
+
                     <p className="font-sans text-[12px] text-[var(--color-text-dim)] tracking-[0.05em]">
                         © {new Date().getFullYear()} — Tutti i diritti riservati
                     </p>
+
                 </footer>
+
             </main>
         </>
     );

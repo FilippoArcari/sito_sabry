@@ -21,12 +21,12 @@ export default function Contatti() {
         <>
             <Navbar />
             <main className="min-h-screen bg-[var(--bg-primary)] pt-[var(--nav-height)] flex flex-col bg-black">
-                <section className="flex-1 w-full flex flex-col items-center justify-center px-6 md:px-12 lg:px-24 py-20 lg:py-32">
+                <section className="flex-1 w-full flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 pt-32 pb-20 lg:pt-40 lg:pb-32">
                     <div className="max-w-3xl w-full mx-auto">
                         <SectionTitle label="Lavoriamo Insieme" title="Contatti" />
 
                         <div className="reveal flex flex-col items-center text-center">
-                            <p className="font-sans text-[15px] text-[var(--color-text-muted)] leading-[1.9] mb-[52px] max-w-[560px] font-light">
+                            <p className="font-sans text-[15px] leading-[1.9] mb-[52px] max-w-[560px] font-light">
                                 {Contatti.description}
                             </p>
 
@@ -34,7 +34,7 @@ export default function Contatti() {
                                 {/* Email */}
                                 <a
                                     href={`mailto:${Contatti.email}`}
-                                    className="flex items-center gap-[18px] no-underline text-inherit transition-opacity duration-200 hover:opacity-70"
+                                    className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-[18px] no-underline text-inherit transition-opacity duration-200 hover:opacity-70 text-center md:text-left"
                                 >
                                     <span className="text-[22px] min-w-[22px] flex justify-center">✉</span>
                                     <div>
@@ -52,7 +52,7 @@ export default function Contatti() {
                                     href={Contatti.instagram_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-[18px] no-underline text-inherit transition-opacity duration-200 hover:opacity-70"
+                                    className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-[18px] no-underline text-inherit transition-opacity duration-200 hover:opacity-70 text-center md:text-left"
                                 >
                                     <span className="text-[22px] min-w-[22px] flex justify-center">📱</span>
                                     <div>
@@ -70,7 +70,7 @@ export default function Contatti() {
                                     href={Contatti.linkedin_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-[18px] no-underline text-inherit transition-opacity duration-200 hover:opacity-70"
+                                    className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-[18px] no-underline text-inherit transition-opacity duration-200 hover:opacity-70 text-center md:text-left"
                                 >
                                     <span className="text-[22px] min-w-[22px] flex justify-center">💼</span>
                                     <div>
@@ -84,13 +84,13 @@ export default function Contatti() {
                                 </a>
 
                                 {/* Location */}
-                                <div className="flex items-center gap-[18px]">
+                                <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-[18px] text-center md:text-left">
                                     <span className="text-[22px] min-w-[22px] flex justify-center">📍</span>
                                     <div>
                                         <span className="block font-sans text-[10px] tracking-[0.25em] uppercase text-[var(--color-gold)] mb-[5px]">
                                             Base
                                         </span>
-                                        <span className="font-sans text-[15px] text-[var(--color-text-muted)] font-light">
+                                        <span className="font-sans text-[15px]  font-light">
                                             {Contatti.location}
                                         </span>
                                     </div>
