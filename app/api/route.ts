@@ -223,7 +223,8 @@ export const DATA_STRUCTURE = {
                     "Sabrina_Arciprete-159.jpg",
                     "Sabrina_Arciprete-160.jpg"
                 ]
-            }
+            },
+            
         ],
         festival_blocks: [
             {
@@ -304,14 +305,25 @@ export const DATA_STRUCTURE = {
                     "Shakedown Ferrari -44.jpg", "Shakedown Ferrari -45.jpg"
                 ],
             },
+            {
+                name: "SchoolVision Milano ",
+                folder: "eventi/schoolvision",
+                cover: "2O0A3424.jpg",
+                files: [
+                    "2O0A2707.jpg", "2O0A2718.jpg", "2O0A2854.jpg", "2O0A2925.jpg", "2O0A2929.jpg",
+                    "2O0A3029.jpg", "2O0A3070.jpg", "2O0A3100.jpg", "2O0A3124.jpg", "2O0A3136.jpg",
+                    "2O0A3159.jpg", "2O0A3166.jpg", "2O0A3186.jpg", "2O0A3229.jpg", "2O0A3380.jpg",
+                    "2O0A3424.jpg"
+                ],
+            }
         ]
     },
     Contatti: {
         email: "sabrinarci13@gmail.com",
-        instagram: "@shot_arci",
-        instagram_url: "https://www.instagram.com/shot_arci",
+        instagram: "@shot_arcy",
+        instagram_url: "https://www.instagram.com/shot_arcy",
         linkedin: "Sabrina Arciprete",
-        linkedin_url: "https://www.linkedin.com/in/sabrina-arciprete",
+        linkedin_url: "https://www.linkedin.com/in/sabrina-arciprete-5064aa325/",
         location: "Trento, disponibile per trasferte nazionali e internazionali",
         description: "Disponibile per concerti, tour, festival e progetti editoriali. Contattami per collaborazioni professionali o per discutere del tuo progetto.",
     },
