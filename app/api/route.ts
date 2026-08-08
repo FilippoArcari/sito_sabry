@@ -294,7 +294,7 @@ export const DATA_STRUCTURE = {
                 ],
             },
             {
-                name: "Shakedown FS-26",
+                name: "Shakedown SF-26",
                 folder: "eventi/shakedown",
                 cover: "Shakedown Ferrari -23.jpg",
                 files: [
