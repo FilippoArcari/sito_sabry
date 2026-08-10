@@ -55,6 +55,7 @@ export default function EventCard({ event, index, onClick }: EventCardProps) {
                 opacity: 0,
                 transform: 'translateY(28px)',
                 transition: 'opacity 0.6s ease, transform 0.6s ease',
+                borderRadius: '8px',
             }}
             aria-label={`Visualizza galleria: ${event.event_name}`}
         >

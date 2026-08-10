@@ -3,19 +3,6 @@
 import Navbar from '../components/Navbar';
 import { DATA_STRUCTURE } from '../api/route';
 
-// ── Section title ─────────────────────────────────────────
-function SectionTitle({ label, title }: { label: string; title: string }) {
-    return (
-        <div className="reveal flex flex-col items-center text-center mb-20">
-            <span className="section-label">{label}</span>
-            <div className="gold-divider" />
-            <h2 className="font-serif text-[clamp(36px,5vw,60px)] font-light text-[var(--color-cream)] tracking-[0.02em]">
-                {title}
-            </h2>
-        </div>
-    );
-}
-
 export default function About() {
     const { Home: homeData } = DATA_STRUCTURE;
 
@@ -26,81 +13,63 @@ export default function About() {
             <main className="min-h-screen bg-black flex flex-col">
 
                 {/* ───────────── ABOUT SECTION ───────────── */}
-                <section className="flex-1  sm:py-24 lg:py-32 px-8 sm:px-14 lg:px-24">
+                <section className="flex-1 w-full h-full flex items-center justify-center  gap-5 py-16 sm:py-24 lg:py-32">
 
-                    {/* container centrale */}
-                    <div className="mx-auto">
+                    {/* wrapper centrato: max-w + mx-auto + padding orizzontale esplicito */}
+                    <div className="w-full max-w-5xl mx-auto px-6 sm:px-10 lg:px-16">
 
-                        <SectionTitle label="Fotografa" title="About Me" />
+                        {/* MAIN TITLE */}
+                        <div className="reveal mb-12 sm:mb-16 lg:mb-20">
+                            <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-[var(--color-cream)] tracking-[0.15em] uppercase">
+                                About Me
+                            </h2>
+                        </div>
 
-                        {/* layout principale */}
-                        <div className="flex flex-col lg:flex-row items-start gap-20 lg:gap-28">
+                        {/* CHI SONO — full width intro */}
+                        <div className="reveal mb-16 sm:mb-20 lg:mb-28 max-w-3xl">
+                            <h3 className="font-sans font-semibold text-[15px] text-[var(--color-cream)] tracking-[0.05em] mb-4">
+                                {homeData.about.title}
+                            </h3>
 
-                            {/* TEXT COLUMN */}
-                            <div className="flex-1 flex flex-col gap-4 px-6" style={{padding:"0px 2em"}}>
-                                <div className="reveal">
-                                {/* Chi sono */}
-                                <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] text-[var(--color-cream)] tracking-[0.02em] mb-8">
-                                    {homeData.about.title}
-                                </h3>
+                            <div className="text-[var(--color-text-muted)] font-light space-y-2 leading-[1.9]">
+                                {homeData.about.text.split('\n').map((para, i) => (
+                                    <p key={`bio-${i}`}>{para}</p>
+                                ))}
+                            </div>
+                        </div>
 
-                                <div className="text-[var(--color-text-muted)] font-light ">
+                        {/* FOTO + IL MIO PERCORSO */}
+                        <div className="reveal delay-100 flex flex-col sm:flex-row items-start gap-8 sm:gap-12 lg:gap-16">
 
-                                    {homeData.about.text.split('\n').map((para, i) => (
-                                        <p 
-                                        className="py-2 sm:px-6 lg:px-8"  
+                            {/* IMAGE — larghezza fissa e responsive, mai a piena larghezza */}
+                            <div className="w-40 sm:w-[220px] lg:w-[280px] flex-shrink-0 mx-auto sm:mx-0 aspect-[4/5] overflow-hidden rounded-sm">
+                                <img
+                                    src="/sabrina.png"
+                                    alt="Sabrina Arciprete"
+                                    className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                        const el = e.currentTarget as HTMLImageElement;
+                                        el.style.display = 'none';
 
-                                        key={`bio-${i}`}>
-                                            {para}
-                                        </p>
-                                    ))}
-
-                                </div>
-                                </div>
-                                {/* Percorso */}
-                                <div className="mt-28 pt-20border-t border-[var(--color-border)] " >
-
-                                    <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] text-[var(--color-cream)] tracking-[0.02em] mb-8">
-                                        {homeData.formation.title}
-                                    </h3>
-
-                                    <div className="space-y-6 text-[15px] leading-[1.95] text-[var(--color-text-muted)] font-light">
-
-                                        {homeData.formation.text.split('\n').map((para, i) => (
-                                            <p key={`form-${i}`}>
-                                                {para}
-                                            </p>
-                                        ))}
-
-                                    </div>
-
-                                </div>
-
+                                        if (el.parentElement) {
+                                            el.parentElement.innerHTML =
+                                                '<span style="font-family:var(--font-sans);font-size:11px;letter-spacing:0.2em;color:var(--color-text-dim);text-transform:uppercase;">Foto in arrivo</span>';
+                                        }
+                                    }}
+                                />
                             </div>
 
+                            {/* PERCORSO TEXT — right aligned solo da sm in su */}
+                            <div className="flex-1 w-full text-left sm:text-right">
+                                <h3 className="font-sans font-semibold text-[15px] text-[var(--color-cream)] tracking-[0.05em] mb-4">
+                                    {homeData.formation.title}
+                                </h3>
 
-                            {/* IMAGE COLUMN */}
-                            <div className="reveal delay-100 flex-1 flex justify-center lg:justify-end w-full">
-
-                                <div className="w-full max-w-[420px] aspect-[3/4] overflow-hidden rounded-lg">
-
-                                    <img
-                                        src="/sabrina.png"
-                                        alt="Sabrina Arciprete"
-                                        className="w-full h-full object-cover"
-                                        onError={(e) => {
-                                            const el = e.currentTarget as HTMLImageElement;
-                                            el.style.display = 'none';
-
-                                            if (el.parentElement) {
-                                                el.parentElement.innerHTML =
-                                                    '<span style="font-family:var(--font-sans);font-size:11px;letter-spacing:0.2em;color:var(--color-text-dim);text-transform:uppercase;">Foto in arrivo</span>';
-                                            }
-                                        }}
-                                    />
-
+                                <div className="space-y-2 text-[15px] leading-[1.9] text-[var(--color-cream)] font-light">
+                                    {homeData.formation.text.split('\n').map((para, i) => (
+                                        <p key={`form-${i}`}>{para}</p>
+                                    ))}
                                 </div>
-
                             </div>
 
                         </div>
@@ -111,7 +80,7 @@ export default function About() {
 
 
                 {/* ───────────── FOOTER ───────────── */}
-                <footer className="bg-[var(--bg-secondary)] border-t border-[var(--color-border)] px-8 sm:px-14 lg:px-24 py-14 flex flex-col items-center text-center gap-4">
+                <footer className="bg-[var(--bg-secondary)] border-t border-[var(--color-border)] px-6 sm:px-10 lg:px-16 py-14 flex flex-col items-center text-center gap-4">
 
                     <div>
                         <span className="font-serif text-[18px] font-light text-[var(--color-cream)] tracking-[0.06em]">

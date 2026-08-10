@@ -11,7 +11,7 @@ interface FestivalBlockProps {
     index?: number;
 }
 
-export default function FestivalBlock({ name, subtitle, folder, cover, onClick, index = 0 }: FestivalBlockProps) {
+export default function  FestivalBlock({ name, subtitle, folder, cover, onClick, index = 0 }: FestivalBlockProps) {
     const blockRef = useRef<HTMLButtonElement>(null);
 
     useEffect(() => {
@@ -45,6 +45,7 @@ export default function FestivalBlock({ name, subtitle, folder, cover, onClick, 
                 width: '100%',
                 height: 'clamp(300px, 40vw, 520px)',
                 overflow: 'hidden',
+                borderRadius: '24px',
                 cursor: 'pointer',
                 background: 'var(--bg-card)',
                 border: '1px solid var(--color-border)',
@@ -135,7 +136,11 @@ export default function FestivalBlock({ name, subtitle, folder, cover, onClick, 
                         fontWeight: 300,
                         color: 'var(--color-cream)',
                         letterSpacing: '0.05em',
-                        lineHeight: 1,
+                        lineHeight: 1.15,
+                        overflowWrap: 'break-word',
+                        wordBreak: 'break-word',
+                        hyphens: 'auto',
+                        maxWidth: '100%',
                     }}
                 >
                     {name}

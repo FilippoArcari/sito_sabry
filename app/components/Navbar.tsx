@@ -7,8 +7,8 @@ import { usePathname } from 'next/navigation';
 const NAV_LINKS = [
     { label: 'Home', href: '/' },
     { label: 'About Me', href: '/about' },
-    { label: 'Concerti e Festival', href: '/concerti' },
     { label: 'Eventi', href: '/eventi' },
+    { label: 'Motosport', href: '/motosport' },
     { label: 'Contatti', href: '/contatti' },
 ];
 
@@ -44,17 +44,17 @@ export default function Navbar() {
                     justifyContent: 'space-between',
                     padding: '0 clamp(24px, 5vw, 64px)',
                     background: scrolled
-                        ? 'rgba(10, 10, 10, 0.96)'
-                        : 'transparent',
-                    backdropFilter: scrolled ? 'blur(12px)' : 'none',
+                        ? 'transparent'
+                        : 'rgba(10, 10, 10, 0.96)',
+                    backdropFilter: scrolled ? 'none' : 'blur(12px)',
                     borderBottom: scrolled
-                        ? '1px solid rgba(201, 169, 110, 0.1)'
-                        : '1px solid transparent',
+                        ? '1px solid transparent'
+                        : '1px solid rgba(201, 169, 110, 0.1)',
                     transition: 'background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease',
                 }}
                 className="animate-slide-down"
             >
-                {/* Logo / Name */}
+                            {/* Logo / Name */}
                 <Link
                     href="/"
                     onClick={() => handleNavClick()}

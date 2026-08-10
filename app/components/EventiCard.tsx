@@ -46,20 +46,22 @@ export default function EventiCard({ item, index, onClick }: EventiCardProps) {
             style={{
                 position: 'relative',
                 width: '100%',
-                minHeight: '320px',
+                minHeight: '500px',
                 overflow: 'hidden',
                 cursor: hasCover ? 'pointer' : 'default',
                 background: 'var(--bg-card)',
                 border: '1px solid var(--color-border)',
                 padding: 0,
-                opacity: 0,
+                opacity: 1  ,
                 transform: 'translateY(28px)',
                 transition: 'opacity 0.6s ease, transform 0.6s ease',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 textAlign: 'center',
+                borderRadius: '8px',
             }}
+
         >
             {hasCover && (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -114,18 +116,7 @@ export default function EventiCard({ item, index, onClick }: EventiCardProps) {
 
             {/* Text */}
             <div style={{ position: 'relative', padding: '48px 36px', width: '100%' }}>
-                <p
-                    style={{
-                        fontFamily: 'var(--font-sans)',
-                        fontSize: '10px',
-                        letterSpacing: '0.3em',
-                        textTransform: 'uppercase',
-                        color: 'var(--color-gold)',
-                        marginBottom: '12px',
-                    }}
-                >
-                    Evento
-                </p>
+                
                 <h3
                     style={{
                         fontFamily: 'var(--font-serif)',

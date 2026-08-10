@@ -13,6 +13,7 @@ export const DATA_STRUCTURE = {
     },
     Concerti: {
         main_title: "Concerti e Festival",
+        main_image: "/foto_eventi.jpg",
         images: [
             {
                 event_name: "Altin Gun",
@@ -257,26 +258,24 @@ export const DATA_STRUCTURE = {
                     "Eden_11.jpg", "Eden_12.jpg", "Eden_13.jpg", "Eden_14.jpg", "Eden_15.jpg",
                 ]
             },
-        ]
-    },
-    Eventi: {
-        main_title: "Eventi",
-        items: [
+        ],
+        eventi_blocks:  [
+            
             {
                 name: "Coscienza Festival",
                 folder: "eventi/coscienza",
-                cover: "2O0A8797.jpg",
+                cover: "Coscienza_Festival.jpg",
                 files: [
                     "2O0A8797.jpg", "2O0A8841.jpg", "2O0A8875.jpg", "2O0A9005.jpg", "2O0A9264.jpg",
                     "2O0A9433.jpg", "2O0A9439.jpg", "2O0A9451.jpg", "2O0A9466.jpg", "2O0A9472.jpg",
                     "2O0A9473.jpg", "2O0A9487.jpg", "2O0A9495.jpg", "2O0A9633.jpg", "2O0A9662.jpg",
-                    "2O0A9753.jpg"
+                    "2O0A9753.jpg", "Coscienza_Festival.jpg"
                 ],
             },
             {
                 name: "Skygarden Tournament",
                 folder: "eventi/skygarden",
-                cover: "Sabrina_Arciprete-80.jpg",
+                cover: "Skygarden.jpg",
                 files: [
                     "0CF7D645-7D41-437A-A611-414E997BE287_L0_001-08_06_2025, 16_32_00.jpg",
                     "17F2136E-13D4-4436-B2F6-373EBD150DE5_L0_001-08_06_2025, 16_32_00.jpg",
@@ -290,32 +289,54 @@ export const DATA_STRUCTURE = {
                     "E459E0C3-C929-43CB-91CF-C1987132626B_L0_001-08_06_2025, 16_31_59 (1).jpg",
                     "F721C092-6580-4DED-ACA2-7E0AA2DB92B9_L0_001-08_06_2025, 16_31_58.jpg",
                     "FDD5E362-5A5E-4DB8-9CB0-D3E09389CA47_L0_001-08_06_2025, 16_31_57.jpg",
-                    "Sabrina_Arciprete-80.jpg"
-                ],
-            },
-            {
-                name: "Shakedown SF-26",
-                folder: "eventi/shakedown",
-                cover: "Shakedown Ferrari -23.jpg",
-                files: [
-                    "Shakedown Ferrari -05.jpg", "Shakedown Ferrari -06.jpg", "Shakedown Ferrari -10.jpg",
-                    "Shakedown Ferrari -11.jpg", "Shakedown Ferrari -12.jpg", "Shakedown Ferrari -19.jpg",
-                    "Shakedown Ferrari -20.jpg", "Shakedown Ferrari -22.jpg", "Shakedown Ferrari -23.jpg",
-                    "Shakedown Ferrari -25.jpg", "Shakedown Ferrari -32.jpg", "Shakedown Ferrari -40.jpg",
-                    "Shakedown Ferrari -44.jpg", "Shakedown Ferrari -45.jpg"
+                    "Sabrina_Arciprete-80.jpg","Skygarden.jpg"
                 ],
             },
             {
                 name: "SchoolVision Milano ",
                 folder: "eventi/schoolvision",
-                cover: "2O0A3424.jpg",
+                cover: "School_Vision.jpg",
                 files: [
                     "2O0A2707.jpg", "2O0A2718.jpg", "2O0A2854.jpg", "2O0A2925.jpg", "2O0A2929.jpg",
                     "2O0A3029.jpg", "2O0A3070.jpg", "2O0A3100.jpg", "2O0A3124.jpg", "2O0A3136.jpg",
                     "2O0A3159.jpg", "2O0A3166.jpg", "2O0A3186.jpg", "2O0A3229.jpg", "2O0A3380.jpg",
-                    "2O0A3424.jpg"
+                    "2O0A3424.jpg", "School_Vision.jpg"
                 ],
             }
+
+        ]
+
+
+
+    },
+    Eventi: {
+        main_title: "Motosport",
+        main_image: "/foto_motosport.jpg",
+        items: [
+            
+            {
+                name: "E-Agle TRT",
+                folder: "eventi/eagle",
+                cover: "E-Agle.jpg",
+                files: [
+                    "5929481924890445182.jpg", "Sabrina_Arciprete-82.jpg", "Sabrina_Arciprete-87.jpg", "Sabrina_Arciprete-93.jpg",
+                    "Sabrina_Arciprete-81.jpg", "Sabrina_Arciprete-83.jpg", "Sabrina_Arciprete-88.jpg", "Sabrina_Arciprete-96.jpg", "E-Agle.jpg"
+                ],
+            },
+            
+            {
+                name: "Shakedown SF-26",
+                folder: "eventi/shakedown",
+                cover: "SF-26.jpg",
+                files: [
+                    "Shakedown Ferrari -05.jpg", "Shakedown Ferrari -06.jpg", "Shakedown Ferrari -10.jpg",
+                    "Shakedown Ferrari -11.jpg", "Shakedown Ferrari -12.jpg", "Shakedown Ferrari -19.jpg",
+                    "Shakedown Ferrari -20.jpg", "Shakedown Ferrari -22.jpg", "Shakedown Ferrari -23.jpg",
+                    "Shakedown Ferrari -25.jpg", "Shakedown Ferrari -32.jpg", "Shakedown Ferrari -40.jpg",
+                    "Shakedown Ferrari -44.jpg", "Shakedown Ferrari -45.jpg","SF-26.jpg"
+                ],
+            },
+            
         ]
     },
     Contatti: {

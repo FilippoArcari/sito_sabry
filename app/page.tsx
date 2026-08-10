@@ -66,9 +66,9 @@ function SectionTitle({ label, title }: { label: string; title: string }) {
     <div className="reveal mb-14 flex flex-col items-center text-center">
       <div className="flex flex-col items-start">
         <span className="section-label">{label}</span>
-        <div className="gold-divider"/>
+        
       </div>
-      <h2 className="font-serif text-[clamp(36px,5vw,60px)] font-light text-[var(--color-cream)] tracking-[0.02em]">
+      <h2 className="font-serif font-medium text-xl text-[var(--color-cream)] tracking-[0.02em]">
         {title}
       </h2>
     </div>
@@ -142,12 +142,13 @@ export default function Home() {
           {/* Hero content */}
           <div className="relative z-10 text-center flex flex-col items-center justify-center w-full px-6 md:px-12 lg:px-24">
 
-            <h1 className="font-serif text-[clamp(56px,12vw,140px)] font-light leading-[0.88] text-[var(--color-cream)] tracking-[0.04em] animate-slide-up delay-300">
-              Sabrina
-              <br />
-              <span className="italic opacity-80">Arciprete</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[0.88] text-[var(--color-cream)] tracking-[0.04em] animate-slide-up delay-300">
+              SABRINA ARCIPRETE
+              
             </h1>
-
+            <h2 className='text-[var(--color-gold)] text-lg md:text-xl lg:text-2xl font-light tracking-[0.1em] animate-slide-up delay-500'>
+              FOTOGRAFA
+            </h2>
           </div>
         </section>
       </main>
