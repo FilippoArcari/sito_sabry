@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef, useCallback, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 interface LightboxModalProps {
     images: string[];
@@ -20,6 +21,11 @@ export default function LightboxModal({
     onNext,
 }: LightboxModalProps) {
     const imgSrc = `/${folder}/${images[currentIndex]}`;
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const handleKey = useCallback(
         (e: KeyboardEvent) => {
@@ -39,7 +45,9 @@ export default function LightboxModal({
         };
     }, [handleKey]);
 
-    return (
+    if (!mounted) return null;
+
+    return createPortal(
         <div
             className="lightbox-overlay"
             onClick={onClose}
@@ -124,11 +132,12 @@ export default function LightboxModal({
             {/* Main image */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
+                key={currentIndex}
                 src={imgSrc}
                 alt={`Foto ${currentIndex + 1}`}
                 className="lightbox-img"
                 onClick={(e) => e.stopPropagation()}
-                loading="lazy"
+                loading="eager"
             />
 
             {/* Next arrow */}
@@ -166,6 +175,7 @@ export default function LightboxModal({
                     ›
                 </button>
             )}
-        </div>
+        </div>,
+        document.body
     );
 }

@@ -237,13 +237,16 @@ h4 {
 }
 
 .lightbox-img {
+  display: block;
   max-width: 90vw;
   max-height: 90vh;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  margin: auto;
   animation: scaleIn 0.3s ease;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
 }
-
 /* ─── Photo Grid ─── */
 .photo-grid {
   columns: 3;

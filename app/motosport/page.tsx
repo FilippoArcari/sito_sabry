@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import EventiCard from '../components/EventiCard';
 import PhotoGallery from '../components/PhotoGallery';
-import { DATA_STRUCTURE } from '../api/route';
+import { DATA_STRUCTURE } from "@/app/data/structure";
 
 type EventiItem = {
     name: string;
@@ -25,10 +25,23 @@ function SectionTitle({ label, title }: { label: string; title: string }) {
     return (
         <div className="reveal flex flex-col ">
             <span className="section-label">{label}</span>
-            
+
             <h2 className="font-serif font-medium text-xl text-[var(--color-cream)] tracking-[0.02em]">
                 {title}
             </h2>
+        </div>
+    );
+}
+
+// ── Divisore con etichetta (categoria) ────────────────────────────────────
+function SectionDivider({ label }: { label: string }) {
+    return (
+        <div className="w-full flex items-center gap-6 my-12 reveal px-4 h-20">
+            <div className="h-px bg-[var(--color-border)] flex-1 opacity-50" />
+            <span className="font-sans text-[clamp(10px,1.2vw,12px)] tracking-[0.4em] uppercase text-[var(--color-gold)] whitespace-nowrap">
+                {label}
+            </span>
+            <div className="h-px bg-[var(--color-border)] flex-1 opacity-50" />
         </div>
     );
 }
@@ -51,8 +64,8 @@ export default function Motosport() {
         <>
             <Navbar />
 
-            <main className="min-h-screen bg-[var(--bg-primary)] pt-[var(--nav-height)] flex flex-col bg-black w-screen items-center gap-3">
-                <Image src={Eventi.main_image} alt={Eventi.main_title} width={1920} height={1080} className="w-full h-[700px] object-cover" />
+            <main className="min-h-screen bg-[var(--bg-primary)] flex flex-col bg-black w-screen items-center gap-3">
+                <Image src={Eventi.main_image} alt={Eventi.main_title} width={1920} height={1080} className="w-full h-175 object-cover" />
                 <section className="flex-1 w-full -translate-y-15 bg-neutral-900 rounded-4xl flex flex-col items-center justify-start px-8 md:px-16 lg:px-32 pt-20  lg:pt-15 ">
                     <div className="w-full mx-auto py-10">
                         <SectionTitle label="Portfolio" title={Eventi.main_title} />
@@ -72,16 +85,24 @@ export default function Motosport() {
                                 />
                             </div>
                         ) : (
-                            <div className="flex flex-col gap-3 w-full justify-center ">
-                                {Eventi.items.map((item, idx) => (
-                                    <EventiCard
-                                        key={item.name}
-                                        item={item as EventiItem}
-                                        index={idx}
-                                        onClick={() => handleOpenEvento(item as EventiItem)}
-                                        
-                                    />
-                                ))}
+                            <div className="flex flex-col w-full items-center">
+                                {Eventi.items
+                                    .filter((group) => group.data.length > 0)
+                                    .map((group) => (
+                                        <div key={group.year} className="w-full flex flex-col items-center">
+                                            <SectionDivider label={group.year} />
+                                            <div className="flex flex-col gap-3 w-full justify-center">
+                                                {(group.data as EventiItem[]).map((item, idx) => (
+                                                    <EventiCard
+                                                        key={item.folder}
+                                                        item={item}
+                                                        index={idx}
+                                                        onClick={() => handleOpenEvento(item)}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ))}
                             </div>
                         )}
                     </div>

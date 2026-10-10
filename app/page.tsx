@@ -6,7 +6,7 @@ import EventCard from './components/EventCard';
 import EventiCard from './components/EventiCard';
 import PhotoGallery from './components/PhotoGallery';
 import FestivalBlock from './components/FestivalBlock';
-import { DATA_STRUCTURE } from './api/route';
+import { DATA_STRUCTURE } from "@/app/data/structure";
 
 type ConcertEvent = {
   event_name: string;

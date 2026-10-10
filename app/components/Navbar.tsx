@@ -7,8 +7,8 @@ import { usePathname } from 'next/navigation';
 const NAV_LINKS = [
     { label: 'Home', href: '/' },
     { label: 'About Me', href: '/about' },
-    { label: 'Eventi', href: '/eventi' },
-    { label: 'Motosport', href: '/motosport' },
+    { label: 'Music & Festival', href: '/eventi' },
+    { label: 'Eventi', href: '/motosport' },
     { label: 'Contatti', href: '/contatti' },
 ];
 
@@ -44,7 +44,7 @@ export default function Navbar() {
                     justifyContent: 'space-between',
                     padding: '0 clamp(24px, 5vw, 64px)',
                     background: scrolled
-                        ? 'transparent'
+                        ? 'rgba(69,69,69, 0.69)'
                         : 'rgba(10, 10, 10, 0.96)',
                     backdropFilter: scrolled ? 'none' : 'blur(12px)',
                     borderBottom: scrolled

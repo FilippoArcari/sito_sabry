@@ -1,7 +1,7 @@
 'use client';
 
 import Navbar from '../components/Navbar';
-import { DATA_STRUCTURE } from '../api/route';
+import { DATA_STRUCTURE } from "@/app/data/structure";
 
 export default function About() {
     const { Home: homeData } = DATA_STRUCTURE;

@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar';
-import { DATA_STRUCTURE } from '../api/route';
+import { DATA_STRUCTURE } from "@/app/data/structure";
 
 // ── Section title ─────────────────────────────────────────────────────────
 function SectionTitle({ label, title }: { label: string; title: string }) {
@@ -20,13 +20,13 @@ export default function Contatti() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen bg-[var(--bg-primary)] pt-[var(--nav-height)] flex flex-col bg-black">
+            <main className="min-h-screen bg-[var(--bg-primary)] pt-[var(--nav-height)] flex flex-col bg-black ">
                 <section className="flex-1 w-full flex flex-col items-center justify-start px-6 md:px-12 lg:px-24 pt-20 pb-20 lg:pt-25 ">
                     <div className="max-w-3xl w-full mx-auto">
                         <SectionTitle label="Lavoriamo Insieme" title="Contatti" />
 
                         <div className="reveal flex flex-col items-center text-center">
-                            <p className="font-sans text-[15px] leading-[1.9] mb-[52px] max-w-[560px] font-light">
+                            <p className="font-sans text-base leading-[1.9] mb-[52px] max-w-[560px] font-light">
                                 {Contatti.description}
                             </p>
 
@@ -36,12 +36,12 @@ export default function Contatti() {
                                     href={`mailto:${Contatti.email}`}
                                     className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-[18px] no-underline text-inherit transition-opacity duration-200 hover:opacity-70 text-center md:text-left"
                                 >
-                                    <span className="text-[22px] min-w-[22px] flex justify-center">✉</span>
+                                    <span className="text-base min-w-[22px] flex justify-center">✉</span>
                                     <div>
                                         <span className="block font-sans text-[10px] tracking-[0.25em] uppercase text-[var(--color-gold)] mb-[5px]">
                                             Email
                                         </span>
-                                        <span className="font-sans text-[16px] text-[var(--color-cream)] font-light">
+                                        <span className="font-sans text-base text-[var(--color-cream)] font-light">
                                             {Contatti.email}
                                         </span>
                                     </div>
@@ -54,12 +54,12 @@ export default function Contatti() {
                                     rel="noopener noreferrer"
                                     className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-[18px] no-underline text-inherit transition-opacity duration-200 hover:opacity-70 text-center md:text-left"
                                 >
-                                    <span className="text-[22px] min-w-[22px] flex justify-center">📱</span>
+                                    <span className="text-base min-w-[22px] flex justify-center">📱</span>
                                     <div>
-                                        <span className="block font-sans text-[10px] tracking-[0.25em] uppercase text-[var(--color-gold)] mb-[5px]">
+                                        <span className="block font-sans text-base tracking-[0.25em] uppercase text-[var(--color-gold)] mb-[5px]">
                                             Instagram
                                         </span>
-                                        <span className="font-sans text-[16px] text-[var(--color-cream)] font-light">
+                                        <span className="font-sans text-base text-[var(--color-cream)] font-light">
                                             {Contatti.instagram}
                                         </span>
                                     </div>
@@ -77,7 +77,7 @@ export default function Contatti() {
                                         <span className="block font-sans text-[10px] tracking-[0.25em] uppercase text-[var(--color-gold)] mb-[5px]">
                                             LinkedIn
                                         </span>
-                                        <span className="font-sans text-[16px] text-[var(--color-cream)] font-light">
+                                        <span className="font-sans text-base text-[var(--color-cream)] font-light">
                                             {Contatti.linkedin}
                                         </span>
                                     </div>
@@ -90,7 +90,7 @@ export default function Contatti() {
                                         <span className="block font-sans text-[10px] tracking-[0.25em] uppercase text-[var(--color-gold)] mb-[5px]">
                                             Base
                                         </span>
-                                        <span className="font-sans text-[15px]  font-light">
+                                        <span className="font-sans text-base  font-light">
                                             {Contatti.location}
                                         </span>
                                     </div>
